@@ -16,7 +16,7 @@ function CryptoTableRow({ data }) {
     // why useNavigate can be handy
     setTimeout(() => {
       setIsLoading(false);
-      navigate(`crypto/detail/${data.name}`)
+      navigate(`crypto/detail/${data.id}`)
     }, 3000);
   }
 

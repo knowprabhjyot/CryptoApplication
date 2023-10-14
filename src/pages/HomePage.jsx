@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import CryptoTable from '../components/CryptoTable';
+import { fetchAPI } from '../utils';
 
 const URL = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd`;
 
@@ -21,9 +22,8 @@ function HomePage(props) {
     }, [])
   
     const getCoinsData = async () => {
-      const response = await fetch(URL);
-      const data = await response.json();
-      setCoinsData(data);
+      const response = await fetchAPI(URL);
+      setCoinsData(response);
     }
   
     return (
