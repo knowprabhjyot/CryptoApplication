@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import './App.css'
 import { Button } from 'react-bootstrap';
+import CryptoTable from './components/CryptoTable';
 
 const URL = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd`;
 
@@ -29,7 +30,7 @@ function App() {
 
   return (
     <>
-      <Button>Click ME!</Button>
+      <CryptoTable data={coinsData} />
     </>
   )
 }
