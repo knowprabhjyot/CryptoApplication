@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Table } from 'react-bootstrap'
 import CryptoTableRow from './CryptoTableRow'
+import './CryptoTable.css';
 
 const   CryptoTable = ({ data }) => {
   return (
